@@ -170,5 +170,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .vscode/
-.games/water_color_sorting/temp/
-.games/water_color_sorting/screenshots/
+games/water_color_sorting/temp/
+games/water_color_sorting/screenshots/
