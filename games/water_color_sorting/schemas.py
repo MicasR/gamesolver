@@ -207,5 +207,6 @@ class WebColor(Enum):
     GameLavender = (254, 186, 253) #added from game
     GameBlue = (54, 49, 251) #added from game
     GameGreen = (16, 165, 15) #added from game
+    GameMagenta = (254, 68, 254)
 
 
