@@ -1,4 +1,4 @@
-from typing import Dict
+from collections import Counter
 from pydantic import BaseModel, field_validator
 from enum import Enum
 
@@ -37,9 +37,20 @@ class Tube(BaseModel):
     color_4: Color = Color()
 
 
+class GameStateReport(BaseModel):
+    tubes: int = 0
+    empty_tubes: int = 0
+    full_tubes: int = 0
+    unique_colors: int = 0
+    colors: Counter = Counter()
+    is_valid_state: bool = False
+    is_game_start: bool = True
+    err_msg: list[str] = []
+
 class GameState(BaseModel):
     """Model representing the complete game state of the water sorting puzzle"""
     tubes: dict[str, Tube]
+    report: GameStateReport = GameStateReport()
 
 
 
@@ -192,7 +203,9 @@ class WebColor(Enum):
     WhiteSmoke = (245,245,245)
     Yellow = (255,255,0)
     YellowGreen = (154,205,50)
-    empty =  (48, 48, 48)  # Space color
-    gameLavender = (254, 186, 253) #added from game
-    gameBlue = (54, 49, 251) #added from game
+    Empty =  (48, 48, 48)  # Space color
+    GameLavender = (254, 186, 253) #added from game
+    GameBlue = (54, 49, 251) #added from game
+    GameGreen = (16, 165, 15) #added from game
+
 
