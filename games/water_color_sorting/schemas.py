@@ -21,6 +21,7 @@ class RgbColorCode(BaseModel):
 
 
 class Color(BaseModel):
+    color_index: int = 0
     name: str = "unknown"
     rgb_code: RgbColorCode = RgbColorCode()
     position: PositionInScreen = PositionInScreen()
