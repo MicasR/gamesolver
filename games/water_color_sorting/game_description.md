@@ -8,9 +8,6 @@ Water Color Sorting is a fun and challenging puzzle game that tests logic and pr
 
 1. **Pouring**: You can only pour water from one test tube to another if the topmost layer of the liquid matches the color in the receiving tube or if the receiving tube is empty.
 2. **One Color Per Tube**: The goal is to ensure that each tube contains only one color at the end of the level.
-3. **Limited Moves** (Optional): Some game modes may restrict the number of moves, requiring more strategic thinking.
-4. **Undo and Hints**: Depending on the game version, players may have limited undo options and hints to help them when stuck.
-5. **Extra Tubes**: Some levels provide additional empty tubes to facilitate sorting, while others require players to work with limited space.
 
 ## Gameplay
 
