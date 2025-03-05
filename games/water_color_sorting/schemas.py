@@ -53,6 +53,11 @@ class GameState(BaseModel):
     report: GameStateReport = GameStateReport()
 
 
+class Move(BaseModel):
+    """Model representing a move in the water sorting puzzle"""
+    source_tube: Tube
+    destination_tube: Tube
+
 
 class WebColor(Enum):
     AliceBlue = (240,248,255)
