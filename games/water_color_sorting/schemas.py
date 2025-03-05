@@ -55,8 +55,8 @@ class GameState(BaseModel):
 
 class Move(BaseModel):
     """Model representing a move in the water sorting puzzle"""
-    select: str
-    target: str
+    select: str #tube key
+    target: str #tube key
 
 
 class WebColor(Enum):
