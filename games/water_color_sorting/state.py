@@ -54,7 +54,7 @@ def identify_tubes(image_path: str) -> s.GameState:
     debug_img = image.copy()
     for x, y, w, h in tube_contours:
         cv2.rectangle(debug_img, (x, y), (x+w, y+h), (0, 255, 0), 2)
-    cv2.imwrite("./temp/contours_debug.png", debug_img)
+    cv2.imwrite("games/water_color_sorting/temp/contours_debug.png", debug_img)
 
     # Sort tubes from left to right, top to bottom
     # First, group tubes by rows (tubes that are roughly on the same y-level)
