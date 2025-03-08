@@ -185,7 +185,6 @@ def add_color_details(image_path:str, state: s.GameState) -> s.GameState:
         center_y = state.tubes[tube].position.y
         cv2.circle(debug_img, (center_x, center_y), 5, (255, 0, 0), -1)
 
-
         # Color 1 - Top position
         state.tubes[tube].color_1.position.x = center_x
         state.tubes[tube].color_1.position.y = center_y - tube_height//3
@@ -219,7 +218,7 @@ def add_color_details(image_path:str, state: s.GameState) -> s.GameState:
     return state
 
 
-def is_valid_state(state: s.GameState, fst_state: bool = True) -> s.GameStateReport:
+def is_valid_state(state: s.GameState, fst_state: bool = False) -> s.GameStateReport:
     """Checks if the initial game state is valid"""
     report = s.GameStateReport()
     report.is_game_start = fst_state
